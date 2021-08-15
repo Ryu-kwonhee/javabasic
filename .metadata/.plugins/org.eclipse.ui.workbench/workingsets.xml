@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1628760652234_0" label="Java Main Sources" name="Java Main Sources">
+<item elementID="=01-javabasic/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=02-JavaBasic/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=_pasted_code_/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=03-JavaBasic/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=04-JavaBasic/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=05-Javaoop/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=06-javaoop/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=07-javaoopgame/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=07-javaoopgame0/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=08-Javaoop0/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=09-Javaoopinteraction0/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=09-javaoopinteraction/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=10-javaoop/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=11-javastatic/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=12-javafinal/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=13-javaabstract/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=14-javainterface/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=15-javaexception/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=16-javaapi/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=17-jdbc/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=18-ojdbc/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=99-javabonus/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=MyFirstWeb/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=test/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1628760652249_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1628760655263_2" label="Window Working Set" name="Aggregate for window 1628760655263"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1628987741703_3" label="Window Working Set" name="Aggregate for window 1628987741703"/>
+</workingSetManager>

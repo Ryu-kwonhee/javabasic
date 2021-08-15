@@ -1,0 +1,7 @@
+package kr.co.ictedu.service;
+
+import javax.servlet.http.HttpServletRequest;
+
+public interface IBoardService2 {
+	void execute(HttpServletRequest request, HttpServletRequest response);
+}

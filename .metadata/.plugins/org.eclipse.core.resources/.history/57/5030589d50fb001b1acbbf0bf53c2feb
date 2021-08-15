@@ -1,0 +1,20 @@
+package kr.co.ictedu.service;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import kr.co.ictedu.board.model.Board2DAO;
+import kr.co.ictedu.board.model.Board2VO;
+import kr.co.ictedu.board.model.BoardDAO;
+
+public class BoardListService2 implements IBoardService2 {
+
+	@Override
+	public void execute(HttpServletRequest request, HttpServletRequest response) {
+		Board2DAO dao = Board2DAO.getInstance();
+		List<Board2VO> board2List = dao.getBoardList();
+		request.setAttribute("board2List", board2List);
+	}
+	
+}

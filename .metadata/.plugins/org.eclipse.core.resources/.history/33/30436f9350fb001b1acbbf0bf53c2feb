@@ -1,0 +1,113 @@
+package kr.co.ictedu.board.model;
+import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+public class Board2DAO {
+	private DataSource ds;
+	
+	private Board2DAO() {
+		try {
+			Context ct = new InitialContext();
+			ds = (DataSource)ct.lookup("java:comp/env/jdbc/mysql");
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	private static Board2DAO dao = new Board2DAO();
+	public static Board2DAO getInstance() {
+		if(dao == null) {
+			dao = new Board2DAO();
+		}
+		return dao;
+	}
+	
+	public int write(Board2VO board) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		int resultCode;
+		
+		String sql = "INSERT INTO jspboard (bname, btitle, bcontent, bdate, bhit)"
+				+ "VALUES(?, ?, ?, now(), 0)";
+		
+		try {
+			con = ds.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, board.getBname());
+			pstmt.setString(2, board.getBtitle());
+			pstmt.setString(3, board.getBcontent());
+			
+			pstmt.executeUpdate();
+			resultCode = 1;
+		} catch(Exception e) {
+			e.printStackTrace();
+			resultCode = 0;
+		}finally {
+			try {
+				if(con != null && !con.isClosed()) {
+					con.close();
+				}
+				if(pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return resultCode;		
+	}// end write
+	
+	public List<Board2VO> getBoardList() {
+		List<Board2VO> board2List = new ArrayList<>();
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String sql = "SELECT * FROM jspboard ORDER BY bid DESC";
+		
+		try {
+			con = ds.getConnection();
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			while (rs.next()) {
+				Board2VO board = new Board2VO();
+				
+				board.setBid(rs.getInt("bid"));
+				board.setBid(rs.getInt("bname"));
+				board.setBid(rs.getInt("btitle"));
+				board.setBid(rs.getInt("bcontent"));
+				board.setBid(rs.getInt("bdate"));
+				board.setBid(rs.getInt("bhit"));
+				
+				board2List.add(board);
+			}
+		} catch(SQLException e) {
+			System.out.println("에러 : "+e);
+		}finally {
+			try {
+				if(con != null && !con.isClosed()) {
+					con.close();
+				}
+				if(pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if(rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+			}catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return board2List;
+	}// end getBoardList
+	
+}
